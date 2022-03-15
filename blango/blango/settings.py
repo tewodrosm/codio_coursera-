@@ -56,7 +56,9 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     "debug_toolbar",
+    'blango_auth',
 ]
+AUTH_USER_MODEL = "blango_auth.User"
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACKS = "bootstrap5"
 

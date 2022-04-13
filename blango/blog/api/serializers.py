@@ -17,11 +17,11 @@ class PostSerializer(serializers.ModelSerializer):
 
 class CommentSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(required=False)
-    creator = UserSerializer(read_only=True)
+    # creator = UserSerializer(read_only=True)
 
     class Meta:
         model = Comment
-        fields = ["id", "creator", "content", "modified_at", "created_at"]
+        fields = ["id", "content", "modified_at", "created_at"]
         readonly = ["modified_at", "created_at"]
 
 class PostDetailSerializer(PostSerializer):
